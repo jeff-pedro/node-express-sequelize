@@ -50,7 +50,7 @@ npm run dev
 - Utilização da herança de classes nas camadas de _Services_ e _Controller_ para reutilizar os métodos comuns de CRUD;
 - [Criação de Modelos](https://sequelize.org/docs/v6/other-topics/migrations/#creating-the-first-model-and-migration), [Migragrações](https://sequelize.org/docs/v6/other-topics/migrations/) e [Seeders](https://sequelize.org/docs/v6/other-topics/migrations/#creating-the-first-seed) através do Sequelize-CLI;
 - Uso de [Associações](https://sequelize.org/docs/v6/core-concepts/assocs/) e aplicação de seus [métodos especiais/mixins](https://sequelize.org/docs/v6/core-concepts/assocs/#special-methodsmixins-added-to-instances).
-- Exclusão de registros em modo *Soft Delete* aplicando conceito de [Paranaid Tables](https://sequelize.org/docs/v6/core-concepts/paranoid) suportado pelo sequelize.
+- Exclusão de registros usando a estratégia *Soft Delete* ao aplicar o conceito de [Paranaid Tables](https://sequelize.org/docs/v6/core-concepts/paranoid) suportado pelo sequelize.
 
 ## 📚 Referências
 - 📚 [Sequelize docs](https://sequelize.org/docs/v6/)
