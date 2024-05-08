@@ -3,6 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.addColumn('categorias', 'deletedAt', {
+      allowNull: true,
       type: Sequelize.DATE
     });
   },
