@@ -37,6 +37,11 @@ module.exports = (sequelize, DataTypes) => {
       where: {
         ativo: true
       }
+    },
+    scopes: {
+      todosOsRegistros: {
+        where: {}
+      }
     }
   });
   return Pessoa;

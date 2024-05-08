@@ -9,6 +9,7 @@ const routes = Router();
 
 routes
   .get('/pessoas', (req, res) => pessoaController.pegaTodos(req, res))
+  .get('/pessoas/todos', (req, res) => pessoaController.pegaTodasAsPessoas(req, res))
   .get('/pessoas/:id', (req, res) => pessoaController.pegaUmPorId(req, res))
   .post('/pessoas', (req, res) => pessoaController.criaNovo(req, res))
   .put('/pessoas/:id', (req, res) => pessoaController.atualiza(req, res))
