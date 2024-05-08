@@ -52,6 +52,8 @@ npm run dev
 - Uso de [Associações](https://sequelize.org/docs/v6/core-concepts/assocs/) e aplicação de seus [métodos especiais/mixins](https://sequelize.org/docs/v6/core-concepts/assocs/#special-methodsmixins-added-to-instances).
 - Exclusão de registros usando a estratégia *Soft Delete* ao aplicar o conceito de [Paranaid Tables](https://sequelize.org/docs/v6/core-concepts/paranoid) suportado pelo sequelize.
 - Adicionar novas migrações para fazer alteração rastreáveis na base de dados.
+- Criacação de [escopos de modelo](https://sequelize.org/docs/v6/other-topics/scopes/).
+- [Validação](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/) de campos usando métodos buit-in do sequelize e validações customizadas.
 
 
 ## 📚 Referências
@@ -60,3 +62,4 @@ npm run dev
 - 🗞️ [API Best Practices](https://www.sitepoint.com/build-restful-apis-best-practices/)
 - 🎬 [Clean Architecture](https://cursos.alura.com.br/extra/alura-mais/clean-architecture-arquitetura-limpa-o-que-e--c204)
 - 🗞️ [Normalização em banco de dados](https://www.alura.com.br/artigos/normalizacao-banco-de-dados-estrutura?_gl=1*wcsgsi*_ga*NzQ2MzgwODAwLjE3MTEyMjQ1NDA.*_ga_1EPWSW3PCS*MTcxNDc0ODgyMC45Ny4xLjE3MTQ3NDkzNzEuMC4wLjA.*_fplc*eVFSQUhObnJMY2YxYTIlMkZrNTRoS2R5MnFoOUpKdUI1ZTVCR1glMkJ4V3AxbFNqMjBhODdBN1NkaDlWNmpWaEV5QzNiTkFaZFh4OHRjUGhvWmNWYUVFRDJVeTVLdGNzck9sNyUyRko2M29NV2N6UlI1Wk9UczlES3c4U3U0VlZxQ1JRJTNEJTNE)
+- [SQLite Tutoria - CHECK Constraint](https://www.sqlitetutorial.net/sqlite-check-constraint/)
