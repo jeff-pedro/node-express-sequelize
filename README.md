@@ -51,6 +51,8 @@ npm run dev
 - [Criação de Modelos](https://sequelize.org/docs/v6/other-topics/migrations/#creating-the-first-model-and-migration), [Migragrações](https://sequelize.org/docs/v6/other-topics/migrations/) e [Seeders](https://sequelize.org/docs/v6/other-topics/migrations/#creating-the-first-seed) através do Sequelize-CLI;
 - Uso de [Associações](https://sequelize.org/docs/v6/core-concepts/assocs/) e aplicação de seus [métodos especiais/mixins](https://sequelize.org/docs/v6/core-concepts/assocs/#special-methodsmixins-added-to-instances).
 - Exclusão de registros usando a estratégia *Soft Delete* ao aplicar o conceito de [Paranaid Tables](https://sequelize.org/docs/v6/core-concepts/paranoid) suportado pelo sequelize.
+- Adicionar novas migrações para fazer alteração rastreáveis na base de dados.
+
 
 ## 📚 Referências
 - 📚 [Sequelize docs](https://sequelize.org/docs/v6/)
