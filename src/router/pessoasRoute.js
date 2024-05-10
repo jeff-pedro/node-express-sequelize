@@ -14,8 +14,9 @@ routes
   .post('/pessoas', (req, res) => pessoaController.criaNovo(req, res))
   .put('/pessoas/:id', (req, res) => pessoaController.atualiza(req, res))
   .delete('/pessoas/:id', (req, res) => pessoaController.exclui(req, res))
-  .get('/pessoas/:estudanteId/matriculas', (req, res) => pessoaController.pegaMatriculas(req, res))
+  .get('/pessoas/:estudanteId/matriculas/todos', (req, res) => pessoaController.pegaTodasAsMatriculas(req, res))
   .get('/pessoas/:estudanteId/matriculas/canceladas', (req, res) => pessoaController.pegaMatriculasCanceladas(req, res))
+  .get('/pessoas/:estudanteId/matriculas', (req, res) => pessoaController.pegaMatriculasAtivas(req, res))
   .post('/pessoas/:estudanteId/matriculas', (req, res) => matriculaController.criaNovo(req, res));
 
 module.exports = routes;
