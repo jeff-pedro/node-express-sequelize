@@ -43,6 +43,7 @@ Subindo a aplicação
 npm run dev
 ```
 
+
 ## 🔎 Explorado 
 
 - Estruturação do projeto utilizando o padrão MVC;
@@ -53,6 +54,7 @@ npm run dev
 - Exclusão de registros usando a estratégia *Soft Delete* ao aplicar o conceito de [Paranaid Tables](https://sequelize.org/docs/v6/core-concepts/paranoid) suportado pelo sequelize.
 - Adicionar novas migrações para fazer alteração rastreáveis na base de dados.
 - Criacação de [escopos de modelo](https://sequelize.org/docs/v6/other-topics/scopes/).
+- Criacação de [escopos de associação](https://sequelize.org/docs/v6/advanced-association-concepts/association-scopes/).
 - [Validação](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/) de campos usando métodos buit-in do sequelize e validações customizadas.
 
 

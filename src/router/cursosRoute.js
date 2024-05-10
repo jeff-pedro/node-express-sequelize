@@ -5,7 +5,7 @@ const cursoController = new CursoController( );
 const routes = Router();
 
 routes
-  .get('/cursos', (req, res) => cursoController.pegaTodos(req, res))
+  .get('/cursos', (req, res) => cursoController.pagaCursos(req, res))
   .get('/cursos/:id', (req, res) => cursoController.pegaUmPorId(req, res))
   .post('/cursos', (req, res) => cursoController.criaNovo(req, res))
   .put('/cursos/:id', (req, res) => cursoController.atualiza(req, res))
