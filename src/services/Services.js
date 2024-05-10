@@ -18,6 +18,10 @@ class Services {
     return dataSource[this.model].findByPk(id);
   }
 
+  async pegaUmRegistro(where) {
+    return dataSource[this.model].findOne({ where });
+  }
+
   async criaRegistro(dados) {
     return dataSource[this.model].create({
       id: uuid(),
@@ -25,12 +29,12 @@ class Services {
     });
   }
 
-  async excluiRegistro(id) {
-    return dataSource[this.model].destroy({ where: { id } });
+  async excluiRegistro(where) {
+    return dataSource[this.model].destroy({ where: { ...where } });
   }
 
-  async atualizaRegistro(dados, id) {
-    const listaDeRegistrosAtualizados = dataSource[this.model].update(dados, { where: { id } });
+  async atualizaRegistro(dados, where) {
+    const listaDeRegistrosAtualizados = dataSource[this.model].update(dados, { where: { ...where } });
 
     if (listaDeRegistrosAtualizados[0] === 0) {
       return false;
