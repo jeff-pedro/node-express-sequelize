@@ -41,6 +41,14 @@ class Services {
     }
     return true;
   }
+
+  async pegaEContaRegistros(where = {}) {
+    return dataSource[this.model].findAndCountAll({ 
+      where,
+      limit: 2,
+      order: [['createdAt', 'DESC']]
+    });
+  }
 }
 
 module.exports = Services;
