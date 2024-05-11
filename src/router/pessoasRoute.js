@@ -18,6 +18,7 @@ routes
   .get('/pessoas/:estudante_id/matriculas/todos', (req, res) => pessoaController.pegaTodasAsMatriculas(req, res))
   .get('/pessoas/:estudante_id/matriculas/canceladas', (req, res) => pessoaController.pegaMatriculasCanceladas(req, res))
   .get('/pessoas/:estudante_id/matriculas/confirmadas', (req, res) => matriculaController.pegaMatriculasPorEstudante(req, res))
+  .get('/pessoas/matriculas/lotadas', (req, res) => matriculaController.cursosLotados(req, res))
   .get('/pessoas/:estudante_id/matriculas/:id', (req, res) => matriculaController.pegaUm(req, res))
   .post('/pessoas/:estudante_id/matriculas', (req, res) => matriculaController.criaNovo(req, res))
   .put('/pessoas/:estudante_id/matriculas/:id', (req, res) => matriculaController.atualiza(req, res))

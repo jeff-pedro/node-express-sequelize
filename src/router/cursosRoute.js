@@ -2,6 +2,7 @@ const { Router } = require('express');
 const { CursoController } = require('../controllers'); 
 
 const cursoController = new CursoController( );
+
 const routes = Router();
 
 routes

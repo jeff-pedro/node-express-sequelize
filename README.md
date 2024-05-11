@@ -56,6 +56,9 @@ npm run dev
 - Criacação de [escopos de modelo](https://sequelize.org/docs/v6/other-topics/scopes/).
 - Criacação de [escopos de associação](https://sequelize.org/docs/v6/advanced-association-concepts/association-scopes/).
 - [Validação](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/) de campos usando métodos buit-in do sequelize e validações customizadas.
+- [Operadores](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#operators) em consultas.
+- [Métodos Finders](https://sequelize.org/docs/v6/core-concepts/model-querying-finders/) com operadores e agregadores para:
+  [ordernar e agrupar](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#ordering-and-grouping) resultados, [contar](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#count), [limitar](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#limits-and-pagination) retorno de consultas e executar consultas escritas diretamente em SQL através do [Sequelize.literal](https://sequelize.org/docs/v6/other-topics/sub-queries/#using-sub-queries-for-complex-ordering) util na insersão de _raw queries_ em consultas SQL mais complexas.
 
 
 ## 📚 Referências
@@ -64,4 +67,8 @@ npm run dev
 - 🗞️ [API Best Practices](https://www.sitepoint.com/build-restful-apis-best-practices/)
 - 🎬 [Clean Architecture](https://cursos.alura.com.br/extra/alura-mais/clean-architecture-arquitetura-limpa-o-que-e--c204)
 - 🗞️ [Normalização em banco de dados](https://www.alura.com.br/artigos/normalizacao-banco-de-dados-estrutura?_gl=1*wcsgsi*_ga*NzQ2MzgwODAwLjE3MTEyMjQ1NDA.*_ga_1EPWSW3PCS*MTcxNDc0ODgyMC45Ny4xLjE3MTQ3NDkzNzEuMC4wLjA.*_fplc*eVFSQUhObnJMY2YxYTIlMkZrNTRoS2R5MnFoOUpKdUI1ZTVCR1glMkJ4V3AxbFNqMjBhODdBN1NkaDlWNmpWaEV5QzNiTkFaZFh4OHRjUGhvWmNWYUVFRDJVeTVLdGNzck9sNyUyRko2M29NV2N6UlI1Wk9UczlES3c4U3U0VlZxQ1JRJTNEJTNE)
-- [SQLite Tutoria - CHECK Constraint](https://www.sqlitetutorial.net/sqlite-check-constraint/)
+- 🗞️ [SQLite Tutoria - CHECK Constraint](https://www.sqlitetutorial.net/sqlite-check-constraint/)
+- 📚 [Lista de operadores genéricos do SQL](https://www.w3schools.com/sql/sql_operators.asp)
+- 📚 [Documentação sobre operadores do SQLite](https://www.sqlite.org/lang_expr.html)
+- 🗞️ [Artigo sobre ordem de execução de queries SQL: por Julia Evans](https://jvns.ca/blog/2019/10/03/sql-queries-don-t-start-with-select/)
+
