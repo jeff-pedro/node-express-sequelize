@@ -12,6 +12,7 @@
   <a href='https://www.alura.com.br/artigos/sqlite-da-instalacao-ate-primeira-tabela' target='_blank'><img src="https://img.shields.io/badge/SQLite-F6F5F2?style=for-the-badge&logo=sqlite&logoColor=blue"/></a>
   <a href='https://sequelize.org/docs/v6/getting-started/' target='_blank'><img src="https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white"/></a>
   <a href='https://nodemon.io/' target='_blank'><img src="https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white"/></a>
+    <a href='https://www.postman.com/' target='_blank'><img src="https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white"></a>
   <a href='https://eslint.org/' target='_blank'><img src="https://img.shields.io/badge/Code Style-eslint-ff69b4.svg?style=for-the-badge&logo=eslint"></a>
 </div>
 
@@ -43,9 +44,21 @@ Subindo a aplicação
 npm run dev
 ```
 
+## 🗺️ Rotas
+- importar arquivo `./arquivos-base/postman_collection.json` no **[Postman](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/)**
+
+
+## Entidade de Modelo Relacional
+<img align=center src="./arquivos-base/entidades.png" alt="Entidade de Modelo Relacional">
+
+
+## 🧩 VSCode Plugins
+- ESLint <sup>(por Microsoft)</sup>
+- SQLite Viewer <sup>(por Florian Klampfer)</sup>
+- SQLite <sup>(por alexcvzz)</sup>
+
 
 ## 🔎 Explorado 
-
 - Estruturação do projeto utilizando o padrão MVC;
 - Abstração do acesso aos dados através da camada de _Services_;
 - Utilização da herança de classes nas camadas de _Services_ e _Controller_ para reutilizar os métodos comuns de CRUD;
@@ -59,6 +72,7 @@ npm run dev
 - [Operadores](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#operators) em consultas.
 - [Métodos Finders](https://sequelize.org/docs/v6/core-concepts/model-querying-finders/) com operadores e agregadores para:
   [ordernar e agrupar](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#ordering-and-grouping) resultados, [contar](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#count), [limitar](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#limits-and-pagination) retorno de consultas e executar consultas escritas diretamente em SQL através do [Sequelize.literal](https://sequelize.org/docs/v6/other-topics/sub-queries/#using-sub-queries-for-complex-ordering) util na insersão de _raw queries_ em consultas SQL mais complexas.
+- Como garantir a integridade das operações feitas em bancos de dados através do uso de [transações](https://sequelize.org/docs/v6/other-topics/transactions/);
 
 
 ## 📚 Referências
@@ -71,4 +85,3 @@ npm run dev
 - 📚 [Lista de operadores genéricos do SQL](https://www.w3schools.com/sql/sql_operators.asp)
 - 📚 [Documentação sobre operadores do SQLite](https://www.sqlite.org/lang_expr.html)
 - 🗞️ [Artigo sobre ordem de execução de queries SQL: por Julia Evans](https://jvns.ca/blog/2019/10/03/sql-queries-don-t-start-with-select/)
-

@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "0074ab88-0b67-4cfd-9e24-db7c7883a30e",
+		"name": "API com Node.js, Express e Sequelize",
+		"description": "Simula uma API para uma Escola desenvolvida em Node.js com Express.js e SQLite.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22093498"
+	},
+	"item": [
+		{
+			"name": "Pessoas",
+			"item": [
+				{
+					"name": "Lista Todas as Pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pessoas/todos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Todas as Pessoas Ativas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pessoas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Pessoa Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pessoas/15d319fc-dc5b-4267-acb7-b10a741953c4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"15d319fc-dc5b-4267-acb7-b10a741953c4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria uma Pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Vinicius Estudante\",\n    \"email\": \"vini@mail.com\",\n    \"cpf\": \"12\",\n    \"ativo\": true,\n    \"role\": \"estudante\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza uma Pessoa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ativo\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/86c27fe0-eaf7-4307-a47d-9efc60628008",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"86c27fe0-eaf7-4307-a47d-9efc60628008"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancela Estudante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pessoas/15d319fc-dc5b-4267-acb7-b10a741953c4/cancela",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"15d319fc-dc5b-4267-acb7-b10a741953c4",
+								"cancela"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exclui uma Pessoa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/110e23a2-88ab-4fcb-ad97-2660c4c00391",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"110e23a2-88ab-4fcb-ad97-2660c4c00391"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria nova Matricula",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"cancelado\",\n    \"curso_id\": \"aaa35776-bc42-4a6a-a08d-bcbe3ad8f58a\",\n    \"estudante_id\": \"86c27fe0-eaf7-4307-a47d-9efc60628008\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/86c27fe0-eaf7-4307-a47d-9efc60628008/matriculas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"86c27fe0-eaf7-4307-a47d-9efc60628008",
+								"matriculas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista todas as Matriculas Ativas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/15d319fc-dc5b-4267-acb7-b10a741953c4/matriculas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"15d319fc-dc5b-4267-acb7-b10a741953c4",
+								"matriculas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Matriculas Por Estudante",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/15d319fc-dc5b-4267-acb7-b10a741953c4/matriculas/confirmadas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"15d319fc-dc5b-4267-acb7-b10a741953c4",
+								"matriculas",
+								"confirmadas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Matriculas Lotadas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/matriculas/lotadas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"matriculas",
+								"lotadas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista todas as Matriculas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/44b91718-e057-4c11-8f90-f53777555f46/matriculas/todos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"44b91718-e057-4c11-8f90-f53777555f46",
+								"matriculas",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista por Matricula",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/86c27fe0-eaf7-4307-a47d-9efc60628008/matriculas/804b7df4-9ca7-49c0-b4b4-46d274d26c16",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"86c27fe0-eaf7-4307-a47d-9efc60628008",
+								"matriculas",
+								"804b7df4-9ca7-49c0-b4b4-46d274d26c16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza uma Matricula",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"cancelado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/86c27fe0-eaf7-4307-a47d-9efc60628008/matriculas/935f6981-fdf4-41e1-be16-5ff217b35295",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"86c27fe0-eaf7-4307-a47d-9efc60628008",
+								"matriculas",
+								"935f6981-fdf4-41e1-be16-5ff217b35295"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exclui uma Matricula",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pessoas/86c27fe0-eaf7-4307-a47d-9efc60628008/matriculas/935f6981-fdf4-41e1-be16-5ff217b35295",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"86c27fe0-eaf7-4307-a47d-9efc60628008",
+								"matriculas",
+								"935f6981-fdf4-41e1-be16-5ff217b35295"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Lista Todas as Categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/categorias",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Categoria Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/categorias/d1844c1e-272b-4815-886d-5ea024f8e204",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categorias",
+								"d1844c1e-272b-4815-886d-5ea024f8e204"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria uma Categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Go lang\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/categorias",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza uma Categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Ruby\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/categorias/d1844c1e-272b-4815-886d-5ea024f8e204",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categorias",
+								"d1844c1e-272b-4815-886d-5ea024f8e204"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exclui uma Categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/categorias/d1844c1e-272b-4815-886d-5ea024f8e204",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categorias",
+								"d1844c1e-272b-4815-886d-5ea024f8e204"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "Lista Todos os Cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cursos?data_inicial=2023-02-01&data_final=2023-04-01",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos"
+							],
+							"query": [
+								{
+									"key": "data_inicial",
+									"value": "2023-02-01"
+								},
+								{
+									"key": "data_final",
+									"value": "2023-04-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Curso Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cursos/95f163e1-b0b5-4d02-9ad5-36442ec944ee",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos",
+								"95f163e1-b0b5-4d02-9ad5-36442ec944ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria uma Curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Websokets com Node.js\",\n    \"descricao\": \"Curso de Websokets com Node.js, Socket,io e MongoDB\",\n    \"data_inicio\": \"2023-01-01\",\n    \"categoria_id\": \"d12d9eb4-40c5-4ab4-8017-88799fd8bd28\",\n    \"docente_id\": \"77c06537-8d57-43fd-8837-24c1d5bbc5a1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cursos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza uma Curso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Websokets com Socket.io\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cursos/95f163e1-b0b5-4d02-9ad5-36442ec944ee",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos",
+								"95f163e1-b0b5-4d02-9ad5-36442ec944ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exclui uma Curso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cursos/95f163e1-b0b5-4d02-9ad5-36442ec944ee",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos",
+								"95f163e1-b0b5-4d02-9ad5-36442ec944ee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET /teste",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/teste",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teste"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
