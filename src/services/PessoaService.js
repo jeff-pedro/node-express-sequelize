@@ -3,6 +3,7 @@ const Services = require('../services/Services.js');
 class PessoaService extends Services {
   constructor() {
     super('Pessoa');
+    this.matriculaService = new Services('Matricula');
   }
 
   async pegaTodasAsMatriculasPorEstudante(id) {
@@ -29,18 +30,8 @@ class PessoaService extends Services {
   }
 
   async cancelaPessoaEMatriculas(estudanteId) {
-    const estudante = await super.pegaUmRegistro({ id: estudanteId });
-    
-    const listaMatriculas = await estudante.getTodasAsMatriculas();
-    
-    listaMatriculas.forEach(async (matricula) => {
-      matricula.status = 'cancelado';
-      await matricula.save();
-    }); 
-
     await super.atualizaRegistro({ ativo: false }, { id: estudanteId });
-
-    return;
+    await this.matriculaService.atualizaRegistro({ status: 'cancelado' }, { estudante_id: estudanteId });
   }
 }
 
