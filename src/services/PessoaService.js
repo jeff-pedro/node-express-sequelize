@@ -27,6 +27,21 @@ class PessoaService extends Services {
     const listaPessoas = await super.pegaRegistrosPorEscopo('todosOsRegistros');
     return listaPessoas;
   }
+
+  async cancelaPessoaEMatriculas(estudanteId) {
+    const estudante = await super.pegaUmRegistro({ id: estudanteId });
+    
+    const listaMatriculas = await estudante.getTodasAsMatriculas();
+    
+    listaMatriculas.forEach(async (matricula) => {
+      matricula.status = 'cancelado';
+      await matricula.save();
+    }); 
+
+    await super.atualizaRegistro({ ativo: false }, { id: estudanteId });
+
+    return;
+  }
 }
 
 module.exports = PessoaService;

@@ -14,6 +14,9 @@ routes
   .post('/pessoas', (req, res) => pessoaController.criaNovo(req, res))
   .put('/pessoas/:id', (req, res) => pessoaController.atualiza(req, res))
   .delete('/pessoas/:id', (req, res) => pessoaController.exclui(req, res))
+  /* codando aqui */
+  .get('/pessoas/:estudante_id/cancelado', (req, res) => pessoaController.cancelaRegistroEstudante(req, res))
+  /* ... */
   .get('/pessoas/:estudante_id/matriculas', (req, res) => pessoaController.pegaMatriculasAtivas(req, res))
   .get('/pessoas/:estudante_id/matriculas/todos', (req, res) => pessoaController.pegaTodasAsMatriculas(req, res))
   .get('/pessoas/:estudante_id/matriculas/canceladas', (req, res) => pessoaController.pegaMatriculasCanceladas(req, res))
